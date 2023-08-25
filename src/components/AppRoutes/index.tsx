@@ -3,7 +3,6 @@ import { Main } from "../../layouts/main";
 import { Home } from "../../pages/Home";
 import { Login } from "../../pages/Login";
 import { NotFound } from "../../pages/NotFound";
-import { Profile } from "../../pages/Profile";
 
 export const AppRoutes = (): JSX.Element => {
     return (

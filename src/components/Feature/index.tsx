@@ -1,4 +1,4 @@
-import { Feature as FeatureType } from "@/types/Feature";
+import { Feature as FeatureType } from "@/utils/types/Feature";
 import chat from "./assets/icon-chat.png";
 import money from "./assets/icon-money.png";
 import security from "./assets/icon-security.png";
