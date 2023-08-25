@@ -1,5 +1,5 @@
-import { Banner } from '../../components/Banner';
-import { Feature } from '../../components/Feature';
+import { Banner } from '@/components/Banner';
+import { Feature } from '@/components/Feature';
 import "./style.scss";
 
 export const Home = (): JSX.Element => {

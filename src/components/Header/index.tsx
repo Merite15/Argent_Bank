@@ -1,5 +1,5 @@
 import Logo from "./logo.png";
-import { pathHome, pathLogin } from '../../utils/routes';
+import { pathHome, pathLogin } from '@/utils/routes';
 import { Link  } from "react-router-dom";
 import "./style.scss";
 

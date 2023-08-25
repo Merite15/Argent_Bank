@@ -1,4 +1,4 @@
-import { SignIn } from "../../components/User/Auth";
+import { SignIn } from "@/components/User/Auth";
 import "./style.scss";
 
 export const Login = (): JSX.Element => {
