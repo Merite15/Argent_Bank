@@ -2,17 +2,17 @@ import { useState, useEffect } from "react";
 
 import { useSelector, useDispatch } from 'react-redux';
 
-import type { rootState } from '../../../store/index';
+import type { rootState } from '@/store/index';
 
-import { setRemember, setToken } from '../../../store/auth';
+import { setRemember, setToken } from '@/store/auth';
 
 import { useNavigate } from "react-router-dom";
 
-import { login } from "../../../services/fetchData";
+import { login } from "@/services/fetchData";
 
 import { Message } from "../../Message";
 
-import { pathProfile } from "../../../utils/routes";
+import { pathProfile } from "@/utils/routes";
 
 import "./style.scss";
 
