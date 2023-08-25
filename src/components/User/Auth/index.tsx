@@ -12,7 +12,7 @@ import { login } from "../../../services/fetchData";
 
 import { Message } from "../../Message";
 
-import { pathUser } from "../../../utils/routes";
+import { pathProfile } from "../../../utils/routes";
 
 import "./style.scss";
 
@@ -29,7 +29,7 @@ export const SignIn = (): JSX.Element => {
     const navigate = useNavigate();
 
     const Login = () => {
-        if (token && remember) { navigate(`/${pathUser}`); };
+        if (token && remember) { navigate(`/${pathProfile}`); };
     };
     useEffect(() => {
         Login();
@@ -53,7 +53,7 @@ export const SignIn = (): JSX.Element => {
             setCodeHTTP(answer);
         } else {
             dispatch(setToken(answer));
-            navigate(`/${pathUser}`);
+            navigate(`/${pathProfile}`);
         }
     };
 

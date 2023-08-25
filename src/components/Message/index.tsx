@@ -14,7 +14,7 @@ export const Message = ({ codeStatus }: { codeStatus: number }): JSX.Element => 
         case 400:
             return (
                 <div className="message-error">
-                    <p>Error {codeStatus} invalid inputs </p>
+                    <p>Error {codeStatus} : User not found </p>
                 </div>
             );
 
