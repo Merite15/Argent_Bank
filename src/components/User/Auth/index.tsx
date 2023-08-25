@@ -23,6 +23,7 @@ export const SignIn = (): JSX.Element => {
     const [codeHTTP, setCodeHTTP] = useState<number>(0);
     const token = useSelector((state: rootState) => state.user.token);
     const remember = useSelector((state: rootState) => state.user.remember);
+    const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -39,15 +40,23 @@ export const SignIn = (): JSX.Element => {
     const handleSubmit = async (e: any) => {
         e.preventDefault();
 
+        // setCodeHTTP(0);
+        setIsLoading(true);
+
         const answer = await login(email, password);
 
+        setIsLoading(false);
+
         if (typeof answer === 'number') {
+            console.log(answer);
+            
             setCodeHTTP(answer);
         } else {
             dispatch(setToken(answer));
             navigate(`/${pathUser}`);
         }
     };
+
 
     return (
         <div className="auth-form-content">
@@ -75,7 +84,9 @@ export const SignIn = (): JSX.Element => {
                     <label htmlFor="remember-me" >Remember me</label>
                 </div>
 
-                <button className={'auth-form-button'}>Sign In</button>
+                <button className='auth-form-button' disabled={isLoading}>
+                    {isLoading ? 'Chargement...' : 'Sign In'}
+                </button>
             </form>
         </div >
     );

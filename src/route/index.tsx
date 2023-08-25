@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import { Main } from "../../layouts/main";
-import { Home } from "../../pages/Home";
-import { Login } from "../../pages/Login";
-import { NotFound } from "../../pages/NotFound";
+import { Main } from "@/layouts/main";
+import { Home } from "@/pages/Home";
+import { Login } from "@/pages/Login";
+import { NotFound } from "@/pages/NotFound";
 
 export const AppRoutes = (): JSX.Element => {
     return (

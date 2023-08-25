@@ -1,3 +1,5 @@
+import { handleResponse } from "@/utils/handleResponse";
+
 const LOGIN = `${import.meta.env.VITE_API_URL}/login`;
 
 export async function login(email: string, password: string): Promise<any | Number> {
@@ -12,8 +14,8 @@ export async function login(email: string, password: string): Promise<any | Numb
                 "email": email,
                 "password": password
             })
-
         });
+
         return await handleResponse(response);
     }
 
