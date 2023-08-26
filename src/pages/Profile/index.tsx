@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logout, editUser } from '@/store/auth';
 import type { rootState } from '@/store/index';
 import "./style.scss";
+import { Transaction } from "@/components/Transaction";
 
 export const Profile = (): JSX.Element => {
     const dispatch = useDispatch();
@@ -26,6 +27,9 @@ export const Profile = (): JSX.Element => {
         <main className="bg-dark">
             <h2 className="sr-only">Accounts</h2>
             <EditUser />
+            <Transaction title={"Argent Bank Checking (x8349)"} amount={"2,082.79"} />
+            <Transaction title={"Argent Bank Savings (x6712)"} amount={"10,928.42"} />
+            <Transaction title={"Argent Bank Credit Card (x8349)"} amount={"184.30"} />
         </main>
     );
 }
