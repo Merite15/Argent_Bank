@@ -1,6 +1,6 @@
 # Argent Bank
 
-Argent Bank is an application for monitoring your physical activity. 12th project of the OpenClassrooms "Web app developer - JavaScript React" course. For this project I'm using React, Recharts, typescript , and SASS and is bootstrapped with https://vitejs.dev/guide/
+Argent Bank is an application for create new authentification system. 13th project of the OpenClassrooms "Web app developer - JavaScript React" course. For this project I'm using React, Recharts, typescript , and SASS and is bootstrapped with https://vitejs.dev/guide/
 
 
 ## Environment Variables
