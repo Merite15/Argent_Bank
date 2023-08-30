@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { pathHome } from "@/utils/routes";
 import { useEffect } from "react";
 
-export const ProtectedRoute = ({ children }: { children: JSX.Element }): JSX.Element => {
+interface ProtectedRouteProps { children: JSX.Element }
+
+export const ProtectedRoute = ({ children }: ProtectedRouteProps): JSX.Element => {
     const navigate = useNavigate();
     const token: string = useSelector((state: rootState) => state.user.token);
     useEffect(() => {

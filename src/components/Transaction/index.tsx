@@ -1,6 +1,8 @@
 import "./style.scss";
 
-export const Transaction = ({ title, amount }: { title: string, amount: string }): JSX.Element => {
+interface TransactionProps { title: string, amount: string }
+
+export const Transaction = ({ title, amount }: TransactionProps): JSX.Element => {
     return (
         <section className="account">
             <div className="account-content-wrapper">

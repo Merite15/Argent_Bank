@@ -36,11 +36,16 @@ export const SignIn = (): JSX.Element => {
     }, []);
 
 
-    /** Handle Submit  */
+    /**
+     * The handleSubmit function is used to handle form submission in a TypeScript React component,
+     * including making an asynchronous login request and updating state accordingly.
+     * @param {any} e - The parameter `e` is an event object that is passed to the `handleSubmit`
+     * function. It is typically an event object that is triggered when a form is submitted.
+     */
     const handleSubmit = async (e: any) => {
+        
         e.preventDefault();
 
-        // setCodeHTTP(0);
         setIsLoading(true);
 
         const answer = await login(email, password);
@@ -48,15 +53,12 @@ export const SignIn = (): JSX.Element => {
         setIsLoading(false);
 
         if (typeof answer === 'number') {
-            console.log(answer);
-            
             setCodeHTTP(answer);
         } else {
             dispatch(setToken(answer));
             navigate(`/${pathProfile}`);
         }
     };
-
 
     return (
         <div className="auth-form-content">

@@ -1,7 +1,9 @@
 import Background from "./banner.jpeg";
 import "./style.scss";
 
-export const Banner = ({ title, subtitle }: { title: Array<string>, subtitle: string }): JSX.Element => {
+interface BannerProps { title: Array<string>, subtitle: string }
+
+export const Banner = ({ title, subtitle }: BannerProps): JSX.Element => {
     return (
         <div className="banner">
             <img src={Background} alt="banner-image" />

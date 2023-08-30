@@ -5,11 +5,3 @@ export interface userState {
     firstName: string,
     lastName: string,
 }
-
-export const initialState: userState = {
-    token: "",
-    email: "",
-    remember: false,
-    firstName: "",
-    lastName: "",
-};

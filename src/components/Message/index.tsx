@@ -1,6 +1,8 @@
 import "./style.scss";
 
-export const Message = ({ codeStatus }: { codeStatus: number }): JSX.Element => {
+interface MessageProps { codeStatus: number }
+
+export const Message = ({ codeStatus }: MessageProps): JSX.Element => {
     switch (codeStatus) {
         case 0: return (<></>);
 
