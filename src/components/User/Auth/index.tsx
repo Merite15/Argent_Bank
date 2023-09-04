@@ -31,6 +31,7 @@ export const SignIn = (): JSX.Element => {
     const Login = () => {
         if (token && remember) { navigate(`/${pathProfile}`); };
     };
+
     useEffect(() => {
         Login();
     }, []);
@@ -64,8 +65,11 @@ export const SignIn = (): JSX.Element => {
         <div className="auth-form-content">
 
             <i className="fa fa-user-circle auth-form-icon"></i>
+            
             <h1>Sign In</h1>
+
             <Message codeStatus={codeHTTP} />
+
             <form onSubmit={handleSubmit}>
                 <div className="input-wrapper">
                     <label htmlFor="email">Email</label>

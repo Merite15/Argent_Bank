@@ -9,6 +9,7 @@ export const Home = (): JSX.Element => {
                 title={['No fees.', 'No minimum deposit.', 'High interest rates.']}
                 subtitle={"Open a savings account with Argent Bank today!"}
             />
+            
             <section id="features" className="features">
                 <h2 className="sr-only">Features</h2>
 

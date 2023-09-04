@@ -29,6 +29,10 @@ Install dependencies
   yarn add
 ```
 
+```bash
+  add env backend url
+```
+
 Start the server
 
 ```bash

@@ -48,4 +48,5 @@ export const store = configureStore({
 store.subscribe(() => saveToLocalStorage(store.getState()));
 
 export type rootState = ReturnType<typeof store.getState>
+
 export type appDispatch = typeof store.dispatch

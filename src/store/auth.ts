@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { userState } from '../utils/types/User';
+import { userState } from '@/utils/types/User';
 
 const initialState: userState = {
     token: "",
@@ -22,10 +22,11 @@ export const auth = createSlice({
         /* The `logout` function is a reducer action that is used to update the state when a user logs out. It
         takes the current state as an argument and sets the `token`, `firstName`, and `lastName` properties
         of the state to empty strings, effectively clearing the user's authentication information. */
-        logout: (state: any) => {
+        logout: (state: userState) => {
             state.token = "";
             state.firstName = "";
             state.lastName = "";
+            state.email = "";
         },
 
         /* The `setToken` function is a reducer action that is used to update the `token` property of
