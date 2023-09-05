@@ -34,7 +34,9 @@ export const EditUser = (): JSX.Element => {
 
     return (
         <div className="edit-user">
-            <h1>Welcome back<br />{`${firstName} ${lastName}`}</h1>
+            <h1>Welcome back
+                <p>{`${firstName} ${lastName}`}</p>
+            </h1>
 
             <Message codeStatus={codeHTTP} />
 

@@ -13,12 +13,24 @@
         color: #42b983;
     }
 
-    .main-nav-item {
-        text-decoration: none;
-        margin-right: 0.5rem;
+    .items {
+        display: flex;
+        align-items: center;
 
-        &:hover {
-            text-decoration: underline;
+        .main-nav-item:first-child {
+            margin-right: 30px;
+            text-transform: capitalize;
+        }
+
+        .main-nav-item {
+            text-decoration: none;
+            margin-right: 0.5rem;
+            display: flex;
+            align-items: center;
+            i {
+                margin-right: 5px;
+                font-size: 35px;
+            }
         }
     }
 }

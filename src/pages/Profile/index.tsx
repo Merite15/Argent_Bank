@@ -3,8 +3,8 @@ import { getUser } from "@/services/fetchData";
 import { useSelector, useDispatch } from 'react-redux';
 import { logout, editUser } from '@/store/auth';
 import type { rootState } from '@/store/index';
-import "./style.scss";
 import { Transaction } from "@/components/Transaction";
+import "./style.scss";
 
 export const Profile = (): JSX.Element => {
     const dispatch = useDispatch();

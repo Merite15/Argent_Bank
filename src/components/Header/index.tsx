@@ -1,16 +1,15 @@
 import Logo from "./logo.png";
 import { pathHome, pathLogin, pathProfile } from '@/utils/routes';
-import { Link, useLocation  } from "react-router-dom";
-import "./style.scss";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { rootState } from "@/store";
 import { logout } from "@/store/auth";
+import "./style.scss";
 
 export const Header = (): JSX.Element => {
-    const myLocation: string = useLocation().pathname;
     const fullName: string = useSelector((state: rootState) => state.user.firstName + " " + state.user.lastName);
-    const isProfilePage: boolean = (myLocation === `/${pathProfile}`);
     const dispatch = useDispatch();
+    const token: string = useSelector((state: rootState) => state.user.token);
 
     return (
         <header>
@@ -25,14 +24,16 @@ export const Header = (): JSX.Element => {
                 </Link>
 
                 <div>
-                    {isProfilePage ?
+                    {token ?
                         <>
-                            <Link className="main-nav-item" to={pathProfile}>
-                                <i className="fa fa-user-circle"></i> {fullName}
-                            </Link>
-                            <Link onClick={() => dispatch(logout())} className="main-nav-item" to={pathLogin}>
-                                <i className="fa fa-sign-out"></i> Logout
-                            </Link>
+                            <div className="items">
+                                <Link className="main-nav-item" to={pathProfile}>
+                                    <i className="fa fa-user-circle"></i> <p>{fullName}</p>
+                                </Link>
+                                <Link onClick={() => dispatch(logout())} className="main-nav-item" to={pathLogin}>
+                                    <i className="fa fa-sign-out"></i> <p>Sign Out</p>
+                                </Link>
+                            </div>
                         </>
                         :
                         <Link className="main-nav-item" to={pathLogin}>

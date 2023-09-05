@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
+    border: 2px solid #C3CFD9;
     background-color: #fff;
     width: 80%;
     margin: 0 auto;
@@ -32,17 +32,20 @@
     .account-content-wrapper {
         width: 100%;
         flex: 1;
+        line-height: 40px;
+        font-weight: bold;
     }
 
     .transaction-button {
         display: block;
-        width: 100%;
-        padding: 8px;
+        // width: 100%;
+        padding: 10px;
         font-size: 1.1rem;
         font-weight: bold;
         margin-top: 1rem;
         border-color: #00bc77;
-        background-color: #00bc77;
+        background-color: #6458F5;
+        border-radius: 5px;
         color: #fff;
     }
 }
