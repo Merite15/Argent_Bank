@@ -11,7 +11,7 @@ export const Home = (): JSX.Element => {
             />
             
             <section id="features" className="features">
-                <h2 className="sr-only">Features</h2>
+                <h2>Features</h2>
 
                 <Feature
                     title={"You are our #1 priority"}

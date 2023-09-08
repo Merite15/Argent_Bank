@@ -9,7 +9,6 @@ import { pathProfile } from "@/utils/routes";
 import "./style.scss";
 
 export const SignIn = (): JSX.Element => {
-
     const [email, setEmail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [codeHTTP, setCodeHTTP] = useState<number>(0);
